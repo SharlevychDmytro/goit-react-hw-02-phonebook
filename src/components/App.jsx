@@ -11,7 +11,9 @@ export class App extends Component {
   };
 
   formSubmit = contact => {
-    const some = this.state.contacts.some(cont => cont.name === contact.name);
+    const some = this.state.contacts.some(
+      cont => cont.name.toLowerCase() === contact.name.toLowerCase()
+    );
     if (some) {
       alert(`${contact.name} is already in contacts`);
       return;
