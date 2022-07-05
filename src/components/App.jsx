@@ -42,7 +42,7 @@ export class App extends Component {
   render() {
     const visibleContacts = this.getVisibleContacts();
     return (
-      <Box bg="background">
+      <Box bg="background" display="flex" flexDirection="column">
         <h1>Phonebook</h1>
         <Form onSubmit={this.formSubmit} />
         <h2>Contacts</h2>

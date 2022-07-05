@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
+import { FormContact, Label } from 'components/Form/Form.styled';
 
 export class Form extends Component {
   state = {
@@ -28,8 +29,8 @@ export class Form extends Component {
   };
   render() {
     return (
-      <form onSubmit={this.formSubmit}>
-        <label>
+      <FormContact onSubmit={this.formSubmit}>
+        <Label>
           Name
           <input
             type="text"
@@ -40,8 +41,8 @@ export class Form extends Component {
             required
             onChange={this.inputChange}
           />
-        </label>
-        <label>
+        </Label>
+        <Label>
           Number
           <input
             type="tel"
@@ -52,9 +53,9 @@ export class Form extends Component {
             required
             onChange={this.inputChange}
           />
-        </label>
+        </Label>
         <button type="submit">Add contact</button>
-      </form>
+      </FormContact>
     );
   }
 }
